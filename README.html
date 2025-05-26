@@ -1,116 +1,166 @@
-<h2>componentes electrónicos básicos</h2>
+<!DOCTYPE html>
+<html lang="es">
 
-  <p>Un componente electrónico es una pieza fundamental usada en la construcción de circuitos electrónicos. Cada componente tiene una función específica, como controlar la corriente, almacenar energía, emitir señales o procesarlas.</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bruma - Aromas Naturales</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #eafaf1;
+      color: #2d2d2d;
+    }
 
-  <button onclick="window.modal1.showModal();">Resistencia</button>
+    header {
+      background-color: #1d5c49;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
 
-  <dialog id="modal1">
+    nav {
+      background-color: #155f4a;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
 
-  <h3>Resistencia</h3>
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+    }
 
-    <p>Función: Limita o regula el flujo de corriente eléctrica en un circuito.!</p>
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 40px;
+      flex-wrap: wrap;
+    }
 
-    <p>Unidad: Ohmios (Ω)</p>
- <img src="https://tse1.mm.bing.net/th?id=OIP.ak0V7RKeZ44ogMEdkj9KYwHaHa&pid=Api&P=0&h=180" width="100%" height="30%">
+    .col {
+      flex: 1;
+      padding: 20px;
+      min-width: 250px;
+    }
 
+    .col h2 {
+      font-size: 1.5em;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #1d5c49;
+    }
 
-  <button onclick="window.modal1.close();">Cerrar</button>
-   
-   
-   
-   </dialog>
+    .bloque {
+      background-color: white;
+      border-radius: 20px;
+      padding: 15px;
+      margin: 10px 0;
+      text-align: center;
+      border: 2px dashed #a3d4b7;
+      font-weight: bold;
+    }
 
+    .circulo {
+      border: 2px solid #2e7d65;
+      border-radius: 50%;
+      padding: 20px;
+      margin: 10px auto;
+      width: 150px;
+      text-align: center;
+      font-size: 0.9em;
+    }
 
+    .circulos-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
 
-<a href="acerca.html"><button>Acerca de</button></a>
+    .vision-mision p {
+      font-size: 0.95em;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
 
-<a href="acerca.html"><button>Acerca de</button></a>
-   
-   
-   <h2>
-   
-    <button onclick="window.modal2.showModal();">Condensador</button>
+    footer {
+      background-color: #2c2c2c;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
 
-  <dialog id="modal2">
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
 
-  <h3>Condensador</h3>
+      .circulo {
+        width: 100px;
+        font-size: 0.8em;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
 
-    <p>Función: Almacena energía en forma de campo eléctrico; se usa para filtrar, estabilizar o temporizar señales.</p>
+<body>
 
-    <p>Unidad: Faradios (F)</p>
-   <img src="https://sensoricx.com/wp-content/uploads/2018/05/p_1_6_7_7_1677-Condensador-electrolitico-1000uF-25V.jpg" width="100%" height="30%">
+  <header>
+    <h1>BRUMA</h1>
+    <p>Perfumes artesanales que conectan cuerpo, mente y espíritu</p>
+  </header>
 
-  <button onclick="window.modal2.close();">Cerrar</button>
-     
-     
-     
-     
-       </dialog>
-     
-     
-     
-      <h2>
-   
-    <button onclick="window.modal3.showModal();"> Inductor</button>
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Catálogo</a>
+    <a href="#">Nosotros</a>
+    <a href="#">Contacto</a>
+  </nav>
 
-  <dialog id="modal3">
+  <div class="container">
+    <!-- Columna 1: Misión y visión -->
+    <div class="col vision-mision">
+      <h2>misión</h2>
+      <p>Crear fragancias naturales que conecten cuerpo, mente y espíritu con la esencia pura de la Tierra, respetando el medio ambiente y celebrando la belleza consciente a través de aromas artesanales, éticos y sostenibles.</p>
 
-  <h3> Inductor</h3>
+      <h2>visión</h2>
+      <p>Ser una marca universal referente en perfumería natural, reconocida por inspirar un estilo de vida consciente, donde el lujo y la sostenibilidad se encuentren en armonía con la Tierra.</p>
+    </div>
 
-    <p>Función: Almacena energía en forma de campo magnético; común en filtros, transformadores y fuentes de poder.</p>
+    <!-- Columna 2: Nuestros olores -->
+    <div class="col">
+      <h2>nuestros olores</h2>
+      <div class="bloque">naranja</div>
+      <div class="bloque">lima limón</div>
+      <div class="bloque">romero</div>
+      <div class="bloque">lavanda</div>
+    </div>
 
-    <p>Unidad: Henrios (H)</p>
-   <img src="https://tse2.mm.bing.net/th?id=OIP.5TLoCyUbVkyYFvwV-BokvQHaHa&pid=Api&P=0&h=180" width="100%" height="30%">
+    <!-- Columna 3: ¿Por qué comprar Bruma? -->
+    <div class="col">
+      <h2>¿por qué comprar bruma?</h2>
+      <div class="circulos-container">
+        <div class="circulo">Ofrece apoyo práctico</div>
+        <div class="circulo">Escucha con empatía</div>
+        <div class="circulo">Valida sus sentimientos</div>
+        <div class="circulo">Evita juicios y críticas</div>
+        <div class="circulo">Fomenta la comunicación</div>
+        <div class="circulo">Anima a buscar ayuda profesional</div>
+      </div>
+    </div>
+  </div>
 
-  <button onclick="window.modal3.close();">Cerrar</button>
-     
-     
-       </dialog>
-    
-    
-    
-    
-    
-    
-    
-       <h2>
-   
-    <button onclick="window.modal4.showModal();"> Diodo</button>
+  <footer>
+    <p>&copy; 2025 Bruma Perfumes. Todos los derechos reservados.</p>
+  </footer>
 
-  <dialog id="modal4">
+</body>
 
-  <h3> Diodo</h3>
-
-    <p>Función: Permite el paso de corriente en una sola dirección. Se usa para rectificación de corriente alterna a continua.</p>
-
-    <p>Variante común: Diodo LED (emite luz)</p>
-   <img src="https://tse2.mm.bing.net/th?id=OIP.ncTsVX0lyfM2SmD_-5OW3QHaHa&pid=Api&P=0&h=180" width="100%" height="30%">
-
-  <button onclick="window.modal4.close();">Cerrar</button>
-     
-     
-       </dialog>
-    
-    
-    
-    
-    
-    
-    
-        <h2>
-   
-    <button onclick="window.modal5.showModal();">  5. LED</button>
-
-  <dialog id="modal5">
-
-  <h3> 5. LED</h3>
-
-    <p>Función: Emite luz cuando pasa corriente por él. Se usa en iluminación e indicadores.</p>
-
-    <p>Símbolo: |>| con flechas indicando luz</p>
-   <img src="https://brillanteiluminacion.mx/blog/wp-content/uploads/2018/08/original.jpg" width="100%" height="30%">
-
-
-     
-       </dialog>
-           <button onclick="window.modal5.close();">Cerrar</button>
+</html>
