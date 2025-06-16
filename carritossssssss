@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Carrito de Compras Simulado</title>
+  <style>
+    body {
+      font-family: Arial;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .producto {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    #carrito {
+      background: #f9f9f9;
+      border: 2px dashed #ccc;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      padding: 5px 10px;
+      cursor: pointer;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      margin-top: 5px;
+    }
+
+    img {
+      width: 100%;
+      max-width: 250px;
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Catálogo de Juegos</h1>
+  <p>"Explora nuestra página de juegos y disfruta de los mejores títulos online: acción, aventura, puzzles y mucho más, todo en un solo lugar"</p>
+
+  <div class="producto">
+    <h3>Minecraft Classic</h3>
+    <p>Precio: $120.000</p>
+    <img src="https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png" alt="Minecraft">
+    <button class="btn" onclick="agregarAlCarrito('Minecraft Classic', 120000)">Agregar al carrito</button>
+  </div>
+
+  <div class="producto">
+    <h3>The Legend of Zelda</h3>
+    <p>Precio: $35.000</p>
+    <img src="https://upload.wikimedia.org/wikipedia/en/a/a2/The_Legend_of_Zelda_Breath_of_the_Wild.jpg" alt="Zelda">
+    <button class="btn" onclick="agregarAlCarrito('The Legend of Zelda', 35000)">Agregar al carrito</button>
+  </div>
+
+  <div class="producto">
+    <h3>Hogwarts Legacy</h3>
+    <p>Precio: $785.000</p>
+    <img src="https://upload.wikimedia.org/wikipedia/en/8/83/Hogwarts_Legacy_cover.jpg" alt="Hogwarts Legacy">
+    <button class="btn" onclick="agregarAlCarrito('Hogwarts Legacy', 785000)">Agregar al carrito</button>
+  </div>
+
+  <div class="producto">
+    <h3>Cyberpunk 2077</h3>
+    <p>Precio: $75.000</p>
+    <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Cyberpunk_2077_box_art.jpg" alt="Cyberpunk">
+    <button class="btn" onclick="agregarAlCarrito('Cyberpunk 2077', 75000)">Agregar al carrito</button>
+  </div>
+
+  <!-- 10 juegos adicionales -->
+
+  <div class="producto">
+    <h3>Red Dead Redemption 2</h3>
+    <p>Precio: $230.000</p>
+    <img src="https://upload.wikimedia.org/wikipedia/en/4/44/Red_Dead_Redemption_II.jpg" alt="RDR2">
+    <button class="btn" onclick="agregarAlCarrito('Red Dead Redemption 2', 230000)">Agregar al carrito</button>
+  </div>
+
+  <div class="producto">
+    <h3>Elden Ring</h3>
+    <p>Precio: $280.000</p>
+    <img src="https://upload.wikimedia.org/wikipedia/en/b/b9/Elden_Ring_Box_art.jpg" alt="Elden Ring">
+    <button class="btn" onclick="agregarAlCarrito('Elden Ring', 280000)">Agregar al carrito</button>
+  </div>
+
+  <div class="producto">
+    <h3>FIFA 24</h3>
+    <p>Precio: $180.000</p>
+    <img src="https://upload.wikimedia.org/wikipedia/en/1/1a/EA_Sports_FC_24_cover.jpg" alt="FIFA 24">
+    <button class="btn" onclick="agregarAlCarrito('FIFA 24', 180000)">Agregar al carrito</button>
+  </div>
+
+  <div class="producto">
+    <h3>Call of Duty: MW3</h3>
+    <p>Precio: $250.000</p>
+    <img src="https://upload.wikimedia.org/wikipedia/en/f/f0/Call_of_Duty_Modern_Warfare_3_cover.jpg" alt="MW3">
+    <button class="btn" onclick="agregarAlCarrito('Call of Duty: MW3', 250000)">Agregar al carrito</button>
+  </div>
+
+  <div class="producto">
+    <h3>The Sims 4</h3>
+    <p>Precio: $90.000</p>
+    <img src="https://upload.wikimedia.org/wikipedia/en/6/60/The_Sims_4_cover_art.jpg" alt="The Sims 4">
+    <button class="btn" onclick="agregarAlCarrito('The Sims 4', 90000)">Agregar al carrito</button>
+  </div>
+
+  <div class="producto">
+    <h3>God of War Ragnarok</h3>
+    <p>Precio: $320.000</p>
+    <img src="https://upload.wikimedia.org/wikipedia/en/e/ed/God_of_War_Ragnar%C3%B6k_cover.jpg" alt="GOW Ragnarok">
+    <button class="btn" onclick="agregarAlCarrito('God of War Ragnarok', 320000)">Agregar al carrito</button>
+  </div>
+
+  <div id="carrito">
+    <h2>Carrito de Compras</h2>
+    <ul id="listaCarrito"></ul>
+    <p><strong>Total:</strong> $<span id="total">0</span></p>
+  </div>
+
+  <script>
+    let carrito = [];
+    let total = 0;
+
+    function agregarAlCarrito(nombre, precio) {
+      carrito.push({ nombre, precio });
+      total += precio;
+      actualizarCarrito();
+    }
+
+    function actualizarCarrito() {
+      const lista = document.getElementById("listaCarrito");
+      const totalSpan = document.getElementById("total");
+
+      lista.innerHTML = "";
+      carrito.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = `${item.nombre} - $${item.precio.toLocaleString()}`;
+        lista.appendChild(li);
+      });
+
+      totalSpan.textContent = total.toLocaleString();
+    }
